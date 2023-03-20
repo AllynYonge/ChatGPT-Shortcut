@@ -171,6 +171,16 @@ const Users: User[] = [
     source: null,
     tags: ['write'],
   },
+    {
+    title: '微型文案',
+    description: 'Can you give 4 ideas for micro-copy for [ when a new user lands to our empty video editor ]',
+    descn: '你能提供4个针对[当新用户进入我们的空白视频编辑器时]的微型文案创意吗？',
+    remark: '根据需求给出简单文案',
+    preview: null,
+    website: null,
+    source: null,
+    tags: ['write','pm'],
+  },
   {
     title: '格言书',
     description: 'I want you to act as an aphorism book. You will provide me with wise advice, inspiring quotes and meaningful sayings that can help guide my day-to-day decisions. Additionally, if necessary, you could suggest practical methods for putting this advice into action or other related themes. My first request is [格言要求]',
@@ -969,7 +979,7 @@ const Users: User[] = [
     preview: null,
     website: 'https://github.com/f/awesome-chatgpt-prompts#act-as-a-uxui-developer',
     source: null,
-    tags: ['code'],
+    tags: ['code','pm'],
   },
   {
     title: '前端：网页设计',
@@ -1400,14 +1410,41 @@ const Users: User[] = [
     source: null,
     tags: ['company'],
   },  {
-    title: '产品经理',
+    title: '需求文档',
     description: 'Please acknowledge my following request. Please respond to me as a product manager. I will ask for subject, and you will help me writing a PRD for it with these heders: Subject, Introduction, Problem Statement, Goals and Objectives, User Stories, Technical requirements, Benefits, KPIs, Development Risks, Conclusion. Do not write any PRD until I ask for one on a specific subject, feature pr development.',
     descn: '请确认我的以下请求。请以产品经理的身份给我答复。我将要求提供主题，你将帮助我为它写一份 PRD，包括这些内容。主题、介绍、问题陈述、目标和目的、用户故事、技术要求、好处、关键绩效指标、开发风险、结论。不要写任何 PRD，直到我要求写一个特定的主题、功能和开发。',
     remark: '根据要求撰写 PRD（产品需求文档）',
     preview: null,
     website: 'https://github.com/f/awesome-chatgpt-prompts#act-as-a-product-manager',
     source: null,
-    tags: ['company'],
+    tags: ['pm','company'],
+  },{
+    title: 'JTBD',
+    description: 'Give examples of JTBD for []',
+    descn: '"JTBD"是"Jobs to Be Done"（需要被完成的工作）的缩写，是一种市场营销和产品开发框架，旨在帮助企业了解消费者对产品或服务的需求和动机。JTBD理论认为，人们购买产品或服务的主要原因是为了完成某些任务或工作，而不是仅仅因为产品本身的特征或功能。因此，通过深入了解消费者的JTBD，企业可以更好地满足消费者的需求，提高产品的市场竞争力。',
+    remark: '根据要求撰写JTBD',
+    preview: null,
+    website: 'https://github.com/f/awesome-chatgpt-prompts#act-as-a-product-manager',
+    source: null,
+    tags: ['pm'],
+  },{
+    title: '编写可用性测试',
+    description: 'Write a usability test for a [video editing product, including a range of tasks to do within the video editor]. List 10',
+    descn: '为视频编辑产品编写一个可用性测试，包括在视频编辑器中完成的一系列任务。列出10个。',
+    remark: '根据要求编写测试用例',
+    preview: null,
+    website: 'https://github.com/f/awesome-chatgpt-prompts#act-as-a-product-manager',
+    source: null,
+    tags: ['pm'],
+  },{
+    title: '问题探索和想法产生',
+    description: 'Users are struggling to [upload videos to our video editing software]. What are some ideas to make it easier?',
+    descn: '用户很难将视频上传到我们的视频编辑软件。有什么想法可以让它变得更容易？',
+    remark: '问题探索和想法产生',
+    preview: null,
+    website: 'https://github.com/f/awesome-chatgpt-prompts#act-as-a-product-manager',
+    source: null,
+    tags: ['pm','mind'],
   },
   {
     title: '销售员',
@@ -1952,6 +1989,15 @@ export const Tags: { [type in TagType]: Tag } = {
       id: "showcase.tag.favorite.description",
     }),
     color: "#e9669e",
+  },
+
+  pm: {
+    label: translate({message:"产品经理"}),
+    description:translate({
+      message:"产品经理",
+      id:"showcase.tag.pm.description",
+    }),
+    color:"#f9361e",
   },
 
   mind: {
