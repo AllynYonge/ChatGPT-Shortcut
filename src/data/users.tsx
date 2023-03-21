@@ -1442,7 +1442,7 @@ const Users: User[] = [
     tags: ['pm','company'],
   },{
     title: 'JTBD',
-    description: 'Give examples of JTBD for []',
+    description: 'Give examples of JTBD for [a video editing platform]',
     descn: '"JTBD"是"Jobs to Be Done"（需要被完成的工作）的缩写，是一种市场营销和产品开发框架，旨在帮助企业了解消费者对产品或服务的需求和动机。JTBD理论认为，人们购买产品或服务的主要原因是为了完成某些任务或工作，而不是仅仅因为产品本身的特征或功能。因此，通过深入了解消费者的JTBD，企业可以更好地满足消费者的需求，提高产品的市场竞争力。',
     remark: '根据要求撰写JTBD',
     preview: null,
