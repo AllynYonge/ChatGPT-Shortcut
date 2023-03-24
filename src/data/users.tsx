@@ -66,6 +66,8 @@ export type TagType =
   | "music"
   | "professional"
   | "contribute"
+  | "pm"
+  | "ui/ux"
   | "personal";
 
 // Add prompts to this list
@@ -989,7 +991,7 @@ const Users: User[] = [
     preview: null,
     website: 'https://github.com/f/awesome-chatgpt-prompts#act-as-a-uxui-developer',
     source: null,
-    tags: ['code','pm'],
+    tags: ['ui_ux'],
   },
   {
     title: '前端：网页设计',
@@ -999,7 +1001,7 @@ const Users: User[] = [
     preview: null,
     website: 'https://github.com/f/awesome-chatgpt-prompts#act-as-a-web-design-consultant',
     source: null,
-    tags: ['code'],
+    tags: ['ui_ux'],
   },
   {
     title: '全栈程序员',
@@ -1989,7 +1991,29 @@ const Users: User[] = [
     website: null,
     source: null,
     tags: ['personal','write'],
+  },
+  {
+    title: '设计应用程序线框图',
+    description: 'Make a wireframe for a [journaling app]',
+    descn: '为一款[日记应用]制作线框图。',
+    remark: '为你的应用程序制作线框图。',
+    preview: null,
+    website: null,
+    source: null,
+    tags: ['ui_ux'],
+  },
+  {
+    title: '设计信息架构',
+    description: 'Create information architecture for a [pregnancy tracking app].',
+    descn: '为一款[孕期追踪应用]创建信息架构。',
+    remark: '给出应用描述，创建应用信息架构。',
+    preview: null,
+    website: null,
+    source: null,
+    tags: ['ui_ux'],
   }
+  // Make a wireframe for a journaling app.
+  // Create information architecture for a pregnancy tracking app.
   /*
   Pro Tip: add your prompt in alphabetical order.
   Appending your prompt here (at the end) is more likely to produce Git conflicts.
@@ -2022,7 +2046,14 @@ export const Tags: { [type in TagType]: Tag } = {
     }),
     color: "#e9669e",
   },
-
+  ui_ux:{
+    label:translate({message:"UI/UX"}),
+    description:translate({
+      message:"UI/UX设计",
+      id:"showcase.tag.ui.description",
+    }),
+    color:"#336912",
+  },
   pm: {
     label: translate({message:"产品经理"}),
     description:translate({
