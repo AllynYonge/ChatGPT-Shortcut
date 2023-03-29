@@ -11,7 +11,6 @@ import ExecutionEnvironment from '@docusaurus/ExecutionEnvironment';
 import Translate, { translate } from '@docusaurus/Translate';
 import { useHistory, useLocation } from '@docusaurus/router';
 import { usePluralForm } from '@docusaurus/theme-common';
-import { debounce } from 'lodash';
 
 import Link from '@docusaurus/Link';
 import Layout from '@theme/Layout';
@@ -26,17 +25,17 @@ import {
 import Heading from '@theme/Heading';
 import ShowcaseTagSelect, {
   readSearchTags,
-} from './_components/ShowcaseTagSelect';
+} from '@site/src/pages/_components/ShowcaseTagSelect';
 import ShowcaseFilterToggle, {
   type Operator,
   readOperator,
-} from './_components/ShowcaseFilterToggle';
+} from '@site/src/pages/_components/ShowcaseFilterToggle';
 import ShowcaseCard from './_components/ShowcaseCard';
-import ShowcaseTooltip from './_components/ShowcaseTooltip';
+import ShowcaseTooltip from '@site/src/pages/_components/ShowcaseTooltip';
 
-import styles from './styles.module.css';
+import styles from '@site/src/pages/styles.module.css';
 
-const TITLE = translate({ message: 'ChatGPT Shortcut - 简单易用的 ChatGPT 快捷指令表，让生产力倍增！标签筛选、关键词搜索和一键复制 Prompts' });
+const TITLE = translate({ message: 'ChatGPT Shortcut - 简单易用的 ChatGPT 快捷指令表，让生产力倍增！' });
 const DESCRIPTION = translate({
   message: '让生产力加倍的 ChatGPT 快捷指令',
 });
@@ -82,9 +81,9 @@ function filterUsers(
 ) {
   if (searchName) {
     // eslint-disable-next-line no-param-reassign
-    // 搜索范围
+    // 搜索范围 searching area
     users = users.filter((user) =>
-      (user.title + user.description + user.desc_cn + user.remark + user.desc_en+ user.remark_en).toLowerCase().includes(searchName.toLowerCase()),
+    (user.title + user.description + user.desc_cn + user.remark + user.desc_en+ user.remark_en).toLowerCase().includes(searchName.toLowerCase()),
     );
   }
   if (selectedTags.length === 0) {
@@ -165,19 +164,6 @@ function ShowcaseFilters() {
           </Heading>
           <span>{siteCountPlural(filteredUsers.length)}</span>
         </div>
-        <Link style={{
-          display: 'inline-block',
-          backgroundColor: '#18816a',
-          color: 'var(--site-color-favorite-background)',
-          padding: '5px 10px',
-          borderRadius: '5px',
-          textDecoration: 'none',
-          fontSize: '8px',
-          fontWeight: 'bold',
-          marginRight: '8px',
-        }} to="/cn" title="将提示词的默认语言切换为中文。">
-          CN
-        </Link>
         <ShowcaseFilterToggle />
       </div>
       <ul className={clsx('clean-list', styles.checkboxList)}>
@@ -234,49 +220,6 @@ function SearchBar() {
   useEffect(() => {
     setValue(readSearchName(location.search));
   }, [location]);
-
-  useEffect(() => {
-    const searchbar = document.getElementById('searchbar');
-    if (searchbar) {
-      searchbar.focus();
-    }
-  }, [value]);
-
-  const updateSearch = useCallback(
-    debounce((searchValue: string) => {
-      const newSearch = new URLSearchParams(location.search);
-      newSearch.delete(SearchNameQueryKey);
-      if (searchValue) {
-        newSearch.set(SearchNameQueryKey, searchValue);
-      }
-      history.push({
-        ...location,
-        search: newSearch.toString(),
-        state: prepareUserState(),
-      });
-    }, 800), //搜索延时
-    [location, history]
-  );
-
-  const handleInput = (e: React.FormEvent<HTMLInputElement>) => {
-    if (window.innerWidth >= 768) { // PC 端
-      setValue(e.currentTarget.value);
-      updateSearch(e.currentTarget.value);
-    } else { // 移动端
-      setValue(e.currentTarget.value);
-      const newSearch = new URLSearchParams(location.search);
-      newSearch.delete(SearchNameQueryKey);
-      if (e.currentTarget.value) {
-        newSearch.set(SearchNameQueryKey, e.currentTarget.value);
-      }
-      history.push({
-        ...location,
-        search: newSearch.toString(),
-        state: prepareUserState(),
-      });
-    }
-  };
-
   return (
     <div className={styles.searchContainer}>
       <input
@@ -286,63 +229,26 @@ function SearchBar() {
           id: 'showcase.searchBar.placeholder',
         })}
         value={value ?? undefined}
-        onInput={handleInput}
+        onInput={(e) => {
+          setValue(e.currentTarget.value);
+          const newSearch = new URLSearchParams(location.search);
+          newSearch.delete(SearchNameQueryKey);
+          if (e.currentTarget.value) {
+            newSearch.set(SearchNameQueryKey, e.currentTarget.value);
+          }
+          history.push({
+            ...location,
+            search: newSearch.toString(),
+            state: prepareUserState(),
+          });
+          setTimeout(() => {
+            document.getElementById('searchbar')?.focus();
+          }, 0);
+        }}
       />
     </div>
   );
 }
-
-// 不区分移动端、PC 端，都使用 800ms 延时
-/* function SearchBar() {
-  const history = useHistory();
-  const location = useLocation();
-  const [value, setValue] = useState<string | null>(null);
-  useEffect(() => {
-    setValue(readSearchName(location.search));
-  }, [location]);
-
-  useEffect(() => {
-    const searchbar = document.getElementById('searchbar');
-    if (searchbar) {
-      searchbar.focus();
-    }
-  }, [value]);
-
-  const updateSearch = useCallback(
-    debounce((searchValue: string) => {
-      const newSearch = new URLSearchParams(location.search);
-      newSearch.delete(SearchNameQueryKey);
-      if (searchValue) {
-        newSearch.set(SearchNameQueryKey, searchValue);
-      }
-      history.push({
-        ...location,
-        search: newSearch.toString(),
-        state: prepareUserState(),
-      });
-    }, 800), //搜索延时
-    [location, history]
-  );
-
-  const handleInput = (e: React.FormEvent<HTMLInputElement>) => {
-    setValue(e.currentTarget.value);
-    updateSearch(e.currentTarget.value);
-  };
-
-  return (
-    <div className={styles.searchContainer}>
-      <input
-        id="searchbar"
-        placeholder={translate({
-          message: 'Search for prompts...',
-          id: 'showcase.searchBar.placeholder',
-        })}
-        value={value ?? undefined}
-        onInput={handleInput}
-      />
-    </div>
-  );
-} */
 
 function ShowcaseCards() {
   const filteredUsers = useFilteredUsers();
@@ -385,7 +291,7 @@ function ShowcaseCards() {
                   styles.showcaseList,
                 )}>
                 {favoriteUsers.map((user) => (
-                  <ShowcaseCard key={user.title} user={user} />
+                  <ShowcaseCard key={user.title_en} user={user} />
                 ))}
               </ul>
             </div>
@@ -396,7 +302,7 @@ function ShowcaseCards() {
             </Heading>
             <ul className={clsx('clean-list', styles.showcaseList)}>
               {otherUsers.map((user) => (
-                <ShowcaseCard key={user.title} user={user} />
+                <ShowcaseCard key={user.title_en} user={user} />
               ))}
             </ul>
           </div>
@@ -412,7 +318,7 @@ function ShowcaseCards() {
           </div>
           <ul className={clsx('clean-list', styles.showcaseList)}>
             {filteredUsers.map((user) => (
-              <ShowcaseCard key={user.title} user={user} />
+              <ShowcaseCard key={user.title_en} user={user} />
             ))}
           </ul>
         </div>
