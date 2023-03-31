@@ -21,8 +21,8 @@ import {
 } from '@site/src/data/users';
 import {sortBy} from '@site/src/utils/jsUtils';
 import Heading from '@theme/Heading';
-import Tooltip from '../ShowcaseTooltip';
-import styles from './styles.module.css';
+import Tooltip from '@site/src/pages/_components/ShowcaseTooltip';
+import styles from '@site/src/pages/_components/ShowcaseCard/styles.module.css';
 
 const TagComp = React.forwardRef<HTMLLIElement, Tag>(
   ({label, color, description}, ref) => (
@@ -71,7 +71,6 @@ function getCardImage(user: User): string {
 
 function ShowcaseCard({user}: {user: User}) {
   const image = getCardImage(user);
-  // 复制
   const [copied, setShowCopied] = useState(false);
   const handleCopyCode = () => {
     if (user.description) {
@@ -80,17 +79,8 @@ function ShowcaseCard({user}: {user: User}) {
     setShowCopied(true);
     setTimeout(() => setShowCopied(false), 2000);
   };
-  // 点击显示中文文本
-  const [paragraphText, setParagraphText] = useState(user.description);
-  function handleParagraphClick() {
-    if (paragraphText === user.description) {
-      setParagraphText(user.desc_cn);
-    } else {
-      setParagraphText(user.description);
-    }
-  }
   return (
-    <li key={user.title} className="card shadow--md">
+    <li key={user.title_en} className="card shadow--md">
       {/* <div className={clsx('card__image', styles.showcaseCardImage)}>
         <Image img={image} alt={user.title} />
       </div> */}
@@ -98,7 +88,7 @@ function ShowcaseCard({user}: {user: User}) {
         <div className={clsx(styles.showcaseCardHeader)}>
           <Heading as="h4" className={styles.showcaseCardTitle}>
             <Link href={user.website} className={styles.showcaseCardLink}>
-              {user.title}
+              {user.title_en}
             </Link>
           </Heading>
           {user.tags.includes('favorite') && (
@@ -125,9 +115,8 @@ function ShowcaseCard({user}: {user: User}) {
             {copied ? <Translate>已复制</Translate> : <Translate>复制</Translate>}
           </button>
         </div>
-        <p className={styles.showcaseCardBody}>👉 {user.remark}</p>
-        {/* <p className={styles.showcaseCardBody}>{user.description}</p> */}
-        <p onClick={handleParagraphClick} className={styles.showcaseCardBody}>{paragraphText}</p>
+        <p className={styles.showcaseCardBody}>👉 {user.remark_en}</p>
+        <p className={styles.showcaseCardBody}>{user.desc_en}</p>
       </div>
       <ul className={clsx('card__footer', styles.cardFooter)}>
         <ShowcaseCardTag tags={user.tags} />
