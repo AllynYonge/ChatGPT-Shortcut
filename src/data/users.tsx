@@ -169,10 +169,10 @@ const Users: User[] = [
     "title": "语音输入优化",
     "description": "Using concise and clear language, please edit the following passage to improve its logical flow, eliminate any typographical errors and respond in Chinese. Be sure to maintain the original meaning of the text. Please begin by editing the following text: [语音文字输入]",
     "desc_cn": "请用简洁明了的语言，编辑以下段落，以改善其逻辑流程，消除任何印刷错误，并以中文作答。请务必保持文章的原意。请从编辑以下文字开始：[语音文字输入]",
-    "remark": "先用第三方应用将语音转换成文字，再用 ChatGPT 进行处理。在进行语音录入时，通常会习惯性地说一些口头禅和语气词，使用 ChatGPT 就可以将其转换成书面语言，以优化语音转文字的效果。源于 @玉树芝兰老师的「用简洁的语言整理这一段话，要逻辑清晰，去掉错别字」。",
+    "remark": "先用第三方应用将语音转换成文字，再用 ChatGPT 进行处理。在进行语音录入时，通常会习惯性地说一些口头禅和语气词，使用 ChatGPT 可以将其转换成书面语言，以优化语音转文字的效果。此外，它还可以用于整理无序文本。源于 @玉树芝兰老师的「用简洁的语言整理这一段话，要逻辑清晰，去掉错别字」。",
     "title_en": "Voice input",
     "desc_en": "Using concise and clear language, please edit the following passage to improve its logical flow, eliminate any typographical errors. Be sure to maintain the original meaning of the text. Please begin by editing the following text:",
-    "remark_en": "When making voice recordings, it is often customary to say verbal and intonational words, which can then be converted into written language using ChatGPT to optimise the speech-to-text effect.",
+    "remark_en": "When making voice recordings, it is often customary to say verbal and intonational words, which can then be converted into written language using ChatGPT to optimise the speech-to-text effect. Additionally, it can also be used to organize disordered text.",
     "preview": null,
     "website": null,
     "source": null,
@@ -210,6 +210,21 @@ const Users: User[] = [
     "source": null,
     "tags": [
       "favorite",
+      "ai"
+    ]
+  },
+  {
+    "title": "提示词生成器②",
+    "description": "I want you to act as a ChatGPT prompt generator, I will send a topic, you have to generate a ChatGPT prompt based on the content of the topic, the prompt should start with \"\"I want you to act as \"\", and guess what I might do, and expand the prompt accordingly Describe the content to make it useful.",
+    "desc_cn": "我希望你能充当 ChatGPT 提示生成器，我会发送一个主题，你需要根据主题内容生成一个以“我希望你能充当”开头的 ChatGPT 提示。猜测一下我的行为，并扩展该提示来描述主题内容，使其更有用。",
+    "remark": "根据主题让 ChatGPT 生成提示词。",
+    "title_en": "ChatGPT prompt generator",
+    "desc_en": "I want you to act as a ChatGPT prompt generator, I will send a topic, you have to generate a ChatGPT prompt based on the content of the topic, the prompt should start with \"\"I want you to act as \"\", and guess what I might do, and expand the prompt accordingly Describe the content to make it useful.",
+    "remark_en": "Generate prompts for ChatGPT based on the topic.",
+    "preview": null,
+    "website": "https://github.com/f/awesome-chatgpt-prompts#act-as-a-chatgpt-prompt-generator",
+    "source": null,
+    "tags": [
       "ai"
     ]
   },
@@ -1926,6 +1941,21 @@ const Users: User[] = [
     ]
   },
   {
+    "title": "日语汉字测验机",
+    "description": "I want you to act as a Japanese Kanji quiz machine. Each time I ask you for the next question, you are to provide one random Japanese kanji from JLPT N5 kanji list and ask for its meaning. You will generate four options, one correct, three wrong. The options will be labeled from A to D. I will reply to you with one letter, corresponding to one of these labels. You will evaluate my each answer based on your last question and tell me if I chose the right option. If I chose the right label, you will congratulate me. Otherwise you will tell me the right answer. Then you will ask me the next question.",
+    "desc_cn": "我希望你能扮演一个日语汉字测验机器。每次我要求下一个问题时，你都会从 JLPT N5 汉字列表中提供一个随机的日本汉字，并询问其含义。您将生成四个选项，其中一个正确，三个错误。选项将标记为 A 到 D。我会回复您一封信，对应于这些标签中的一个。您将根据上一道题目评估我的每个答案，并告诉我是否选择了正确的选项。如果我选择了正确的标签，则会祝贺我。否则，您将告诉我正确答案。然后你会问下一个问题。",
+    "remark": "帮助用户练习认识和理解日本汉字。",
+    "title_en": "Japanese Kanji Quiz Machine",
+    "desc_en": "I want you to act as a Japanese Kanji quiz machine. Each time I ask you for the next question, you are to provide one random Japanese kanji from JLPT N5 kanji list and ask for its meaning. You will generate four options, one correct, three wrong. The options will be labeled from A to D. I will reply to you with one letter, corresponding to one of these labels. You will evaluate my each answer based on your last question and tell me if I chose the right option. If I chose the right label, you will congratulate me. Otherwise you will tell me the right answer. Then you will ask me the next question.",
+    "remark_en": "Help users practice recognizing and understanding Japanese kanji.",
+    "preview": null,
+    "website": "https://github.com/f/awesome-chatgpt-prompts#act-as-a-japanese-kanji-quiz-machine",
+    "source": null,
+    "tags": [
+      "language"
+    ]
+  },
+  {
     "title": "五子棋",
     "description": "Let us play Gomoku. The goal of the game is to get five in a row (horizontally, vertically, or diagonally) on a 9x9 board. Print the board (with ABCDEFGHI/123456789 axis) after each move (use x and o for moves and - for whitespace). You and I take turns in moving, that is, make your move after my each move. You cannot place a move an top of other moves. Do not modify the original board before a move. Now make the first move.",
     "desc_cn": "让我们来玩五子棋。这个游戏的目标是在 9x9 的棋盘上连续得到 5 个（水平、垂直或对角线）。每次移动后打印棋盘（以 ABCDEFGHI/123456789 为轴）（用 x 和 o 表示移动，-表示空白）。你和我轮流下棋，也就是说，在我的每一步棋之后下你的棋。你不能将棋子放在其他棋子之上。在下棋前不要修改原棋盘。现在下第一步棋。",
@@ -2145,6 +2175,21 @@ const Users: User[] = [
     "remark_en": "chemical reaction vessel",
     "preview": null,
     "website": "https://github.com/f/awesome-chatgpt-prompts#act-as-a-chemical-reaction-vessel",
+    "source": null,
+    "tags": [
+      "tool"
+    ]
+  },
+  {
+    "title": "维基百科页面",
+    "description": "I want you to act as a Wikipedia page. I will give you the name of a topic, and you will provide a summary of that topic in the format of a Wikipedia page. Your summary should be informative and factual, covering the most important aspects of the topic. Start your summary with an introductory paragraph that gives an overview of the topic. My first topic is [主题]",
+    "desc_cn": "我希望你能扮演维基百科页面的角色。我会给你一个主题名称，然后你将以维基百科页面的格式提供该主题的摘要。您的摘要应具有信息性和事实性，涵盖该主题最重要的方面。请从概述该主题的介绍段开始撰写您的摘要。",
+    "remark": "帮助用户获取关于某个主题的基本信息，并以维基百科页面的格式提供摘要。通过这种方式，用户可以快速了解一个主题的相关信息，从而更好地了解和掌握该主题。",
+    "title_en": "Wikipedia page",
+    "desc_en": "I want you to act as a Wikipedia page. I will give you the name of a topic, and you will provide a summary of that topic in the format of a Wikipedia page. Your summary should be informative and factual, covering the most important aspects of the topic. Start your summary with an introductory paragraph that gives an overview of the topic. My first topic is \"The Great Barrier Reef.\"",
+    "remark_en": "Help users obtain basic information about a certain topic and provide a summary in the format of a Wikipedia page. Through this method, users can quickly understand relevant information about a topic, thus better understanding and mastering it.",
+    "preview": null,
+    "website": "https://github.com/f/awesome-chatgpt-prompts#act-as-a-wikipedia-page",
     "source": null,
     "tags": [
       "tool"
@@ -3077,18 +3122,51 @@ const Users: User[] = [
     ]
   },
   {
-    "title": "阅读空气",
-    "description": "我做了 [某个具体的事情]，有人回复我：[回复内容]。请问对方可能想表达什么意思？",
-    "desc_cn": "我做了 [某个具体的事情]，有人回复我：[回复内容]。请问对方可能想表达什么意思？",
-    "remark": "对于一些无法理解的对话，提供对话背景让 AI 来进行解读。",
-    "title_en": "Interpret underlying meaning",
-    "desc_en": "I did [a specific action], and someone responded with [response content]. What might the other person be trying to express?",
-    "remark_en": "空気を読む read the air. For some incomprehensible conversations, provide the context of the conversation for AI to interpret.",
+    "title": "中学满分作文",
+    "description": "我需要你写作文，文体为记叙文，800 字左右。文章分为开头，三个层次，结尾。开头，结尾，以及每个层次都需要紧扣题目，题目要贯穿全文，每个层次都要一件单独的事情。第一层次要关于具体的技巧性描写（细节动作描写，艺术美，初次尝试的喜悦，紧扣题目）；第二层次要有一点创新的内容（细节动作描写，创新的想法，创新后体会到的深层道理，紧扣题目）；第三层次要关于深层内容（文化传承/自我价值/责任担当，紧扣题目）。对于标题，有表层含义和深层含义（引申含义），在文中应该充分体现。\n我需要你先告诉我你对于标题的解读，两层含义分别是什么，以及能对应什么具体事物。然后给我一份提纲，提纲包括：具体的开头段落，三个层次的事件主旨点题句及具体的事件，具体的结尾段落。\n标题是《xxxx》，材料为 [xxxx]。",
+    "desc_cn": "我需要你写作文，文体为记叙文，800 字左右。文章分为开头，三个层次，结尾。开头，结尾，以及每个层次都需要紧扣题目，题目要贯穿全文，每个层次都要一件单独的事情。第一层次要关于具体的技巧性描写（细节动作描写，艺术美，初次尝试的喜悦，紧扣题目）；第二层次要有一点创新的内容（细节动作描写，创新的想法，创新后体会到的深层道理，紧扣题目）；第三层次要关于深层内容（文化传承/自我价值/责任担当，紧扣题目）。对于标题，有表层含义和深层含义（引申含义），在文中应该充分体现。\n我需要你先告诉我你对于标题的解读，两层含义分别是什么，以及能对应什么具体事物。然后给我一份提纲，提纲包括：具体的开头段落，三个层次的事件主旨点题句及具体的事件，具体的结尾段落。\n标题是《xxxx》，材料为 [xxxx]。",
+    "remark": "在执行完这个 prompt 后，再输入「把这些转换成一篇作文」，查看文章效果是否更佳。来自 @Qizhen-Yang 的投稿。",
+    "title_en": "High schoolers' essay",
+    "desc_en": "Please write a narrative essay of about 800 words. The essay should have an introduction, three distinct sections, and a conclusion. Each section should focus on a single event related to the main theme, which should be present throughout the essay. \n\n1. For the first section, focus on detailed descriptions of a specific skill or technique, including its artistic beauty and the joy of trying it for the first time.\n2. In the second section, describe an innovative idea or concept, including details of its implementation and the deeper insights gained from the innovation.\n3. The third section should revolve around a deeper aspect, such as cultural heritage, self-worth, or responsibility.\n\nBefore starting the essay, please share your interpretation of the title, including its surface and deeper meanings, and how they can be related to specific events or objects. Then, provide an outline of the essay, including the introduction, the main points and events for each of the three sections, and the conclusion.The title of the essay is [XXX], and the material is [YYY].",
+    "remark_en": "The article produced by this prompt reflects the writing style of Chinese middle school students. Contributed by @Qizhen-Yang.",
     "preview": null,
     "website": null,
     "source": null,
     "tags": [
-      "personal"
+      "contribute",
+      "write"
+    ]
+  },
+  {
+    "title": "流程文档生成器",
+    "description": "You will act as a process document generator. Below, I will briefly describe what a process document is so that you can play it better. Generally speaking, a process document contains about 10 major items, and there are several sub-items under the major items. Of course, not all major items contain sub-items. The 10 major items generally include【1. Process Overview2. Objectives3. Scope of application4. Process Owner5. Definition and Terminology6. Related Process Standards (Process Interface)7. Organizational Responsibilities8. System and Operating Permissions9. Business Process Flowchart10. Process Description.】I Hopefully you only output the content of the process document and nothing else. My first process document was [流程目的]",
+    "desc_cn": "你将扮演一个流程文档生成器的角色。以下，我将简要介绍流程文档是什么，以便你更好地执行。一般而言，流程文档包含大约 10 个主要项目，而在主要项目下有几个子项目。当然，并不是所有主要项目都包含子项目。这 10 个主要项目通常包括【1. 流程概述 2. 目标 3. 适用范围 4. 流程所有者 5. 定义和术语 6. 相关流程标准（流程接口）7. 组织职责 8. 系统和操作权限 9. 业务流程图 10. 流程描述。】希望你只输出流程文档的内容，没有其他内容。请用中文回复。",
+    "remark": "为固定流程的文档生成大纲，同样使用于其他类型的文档。来自 @Junkdo 的投稿。",
+    "title_en": "Process Document Generator",
+    "desc_en": "You will act as a process document generator. Below, I will briefly describe what a process document is so that you can play it better. Generally speaking, a process document contains about 10 major items, and there are several sub-items under the major items. Of course, not all major items contain sub-items. The 10 major items generally include [1. Process Overview2. Objectives3. Scope of application4. Process Owner5. Definition and Terminology6. Related Process Standards (Process Interface)7. Organizational Responsibilities8. System and Operating Permissions9. Business Process Flowchart10. Process Description.] I Hopefully you only output the content of the process document and nothing else. My first process document was [Topic]",
+    "remark_en": "To generate an outline for documents with fixed processes, this prompt can also be applied to other types of documents. Contributed by @Junkdo.",
+    "preview": null,
+    "website": null,
+    "source": null,
+    "tags": [
+      "contribute",
+      "tool"
+    ]
+  },
+  {
+    "title": "阅读空气",
+    "description": "在以下这个场景中，有人对我说了一句话，请帮我分析对方可能想表达什么意思，并提供一个合适的回应。场景：[描述一个具体的情境]。说话人说：[具体的话语]。对方的意图可能是什么？我应该如何回应？",
+    "desc_cn": "发生 [某个具体的事情/背景]，有人对我说：[内容]。请问对方可能想表达什么意思？你会怎样回应？",
+    "remark": "对于一些无法理解的对话，提供对话背景让 AI 来进行解读并制定出适当的回应。",
+    "title_en": "AI Conversation",
+    "desc_en": "In the following scenario, someone said something to me. Please help me analyze what the other person might want to express and provide a suitable response. Scenario: [Describe a specific situation]. The speaker says: [Specific words]. What could be the other person's intention? How should I respond?",
+    "remark_en": "空気を読む read the air. For some incomprehensible conversations, provide the context of the conversation for AI to interpret and formulate an appropriate response.",
+    "preview": null,
+    "website": null,
+    "source": null,
+    "tags": [
+      "personal",
+      "social"
     ]
   },
   {
@@ -3099,21 +3177,6 @@ const Users: User[] = [
     "title_en": "Self-check on expression ",
     "desc_en": "After [a specific action], I said: [my response]. How might the other person interpret my meaning?",
     "remark_en": "If you belong to the highly sensitive population or if your words are frequently misunderstood, using AI interpretation can help you self-check before speaking to ensure clear expression.",
-    "preview": null,
-    "website": null,
-    "source": null,
-    "tags": [
-      "personal"
-    ]
-  },
-  {
-    "title": "代为应答",
-    "description": "今天发生了以下具体情况：[描述具体情况]，对方说：[回复内容]。请问对方可能想表达什么意思？你会怎样回应？",
-    "desc_cn": "今天发生了以下具体情况：[描述具体情况]，对方说：[回复内容]。请问对方可能想表达什么意思？你会怎样回应？",
-    "remark": "当不知如何回复对方时，让 AI 进行回答。",
-    "title_en": "Reply by AI",
-    "desc_en": "Describe a specific situation that occurred today: [Provide details of the situation]. The other person responded by saying: [Reply from the other person]. What do you think the other person's intended meaning might be, and how would you respond to them?",
-    "remark_en": "When unsure of how to respond, allow AI to provide a reply.",
     "preview": null,
     "website": null,
     "source": null,
