@@ -2707,12 +2707,12 @@ const Users: User[] = [
   },
   {
     "title": "代码释义器",
-    "description": "I would like you to serve as a code interpreter, elucidate the syntax and the semantics of the code.",
+    "description": "I would like you to serve as a code interpreter, and elucidate the syntax and the semantics of the code line-by-line.",
     "desc_cn": "我希望你能充当代码解释者，阐明代码的语法和语义。",
-    "remark": "让 AI 解释每步代码的作用。来自 @Tractor1928 的投稿。",
+    "remark": "让 AI 解释每步代码的作用。来自 @Tractor1928 的投稿，后由 @yiqiongwu 修改。",
     "title_en": "Code Interpreter",
-    "desc_en": "I would like you to serve as a code interpreter, elucidate the syntax and the semantics of the code.",
-    "remark_en": "Let AI explain the function of each line of code. Contributed by @Tractor1928.",
+    "desc_en": "I would like you to serve as a code interpreter, and elucidate the syntax and the semantics of the code line-by-line.",
+    "remark_en": "Let AI explain the function of each line of code. Contributed by @Tractor1928 and @yiqiongwu.",
     "preview": null,
     "website": null,
     "source": null,
@@ -3186,6 +3186,38 @@ const Users: User[] = [
     ]
   },
   {
+    "title": "英语对话学习和纠正",
+    "description": "规则如下:\n我：-输入:{我会用英文输入语句}\n你：评价:{请你对我的输入语句进行判断，判断我的语法、单词拼写有没有错误，并帮我纠正}\n-更地道的表达方式:{将我的输入语句进行修改，改成更加地道的表达方式输出:{回答我的输入语句，用通俗易懂的语言，需要用英文}\n-翻译:{翻译你的输出}\n示例:\n我：输入:how can i improve my english fast\n你：评价：你的句子语法没有错误，但是单词拼写有一个错误，\"english\"应该是大写的\"E\”。\n更地道的表达方式:How can Iquickly improve my English skills? 输出:There are several ways to improve your English quicklyFirst,practice speaking and listening to English as much as possible.You can do this by watching English movies, TV shows, or listening to English podcasts. Secondtry to read English books or articles and learn new words every day.Third,take an English course or find a tutor who can help you practice and give you feedback. Consistent practice and exposure to the language is key to improving quickly.\n翻译:有几种方法可以快速提高你的英语水平。首先，尽可能多地练习英语口语和听力。你可以通过观看英语电影、电视节目或听英语播客来实现这一点。其次，尝试阅读英语书籍或文章，并每天学习新单词。第三，参加英语课程或找到一位能帮助你练习并给予反馈的家教。坚持练习和接触英语是快速提高的关键。\n\n如果你明白了以上规则，就告诉我明白了,接下来的对话我们都要遵守这个规则。",
+    "desc_cn": "规则如下:\n我：-输入:{我会用英文输入语句}\n你：评价:{请你对我的输入语句进行判断，判断我的语法、单词拼写有没有错误，并帮我纠正}\n-更地道的表达方式:{将我的输入语句进行修改，改成更加地道的表达方式输出:{回答我的输入语句，用通俗易懂的语言，需要用英文}\n-翻译:{翻译你的输出}\n示例:\n我：输入:how can i improve my english fast\n你：评价：你的句子语法没有错误，但是单词拼写有一个错误，\"english\"应该是大写的\"E\”。\n更地道的表达方式:How can Iquickly improve my English skills? 输出:There are several ways to improve your English quicklyFirst,practice speaking and listening to English as much as possible.You can do this by watching English movies, TV shows, or listening to English podcasts. Secondtry to read English books or articles and learn new words every day.Third,take an English course or find a tutor who can help you practice and give you feedback. Consistent practice and exposure to the language is key to improving quickly.\n翻译:有几种方法可以快速提高你的英语水平。首先，尽可能多地练习英语口语和听力。你可以通过观看英语电影、电视节目或听英语播客来实现这一点。其次，尝试阅读英语书籍或文章，并每天学习新单词。第三，参加英语课程或找到一位能帮助你练习并给予反馈的家教。坚持练习和接触英语是快速提高的关键。\n\n如果你明白了以上规则，就告诉我明白了,接下来的对话我们都要遵守这个规则。",
+    "remark": "通过评论、修正英语和翻译三方面来进行英语学习，拯救你的塑料英语。来自 @wxhzhwxhzh 的投稿。",
+    "title_en": "English learning for Chinese",
+    "desc_en": "Please follow these instructions for our conversation:\n\n1. I will provide a sentence in English.\n2. Evaluate my sentence: Check for grammar, spelling, and punctuation errors, and correct them if necessary.\n3. Provide a more native-sounding version of my sentence.\n4. Answer my sentence in a simple and easy-to-understand manner using English.\n5. Translate your answer into Chinese.\n\nExample:\nMe: How can i improve my english fast?\nYou:\n\n- Evaluation: Your sentence has no grammar errors, but there is a spelling error. \"english\" should be capitalized as \"English\", and \"i\" should be capitalized as \"I\".\n- Native-sounding version: How can I quickly improve my English skills?\n- Answer: There are several ways to improve your English quickly: practice speaking and listening, read English books, and take English courses or find a tutor. Consistent practice is key.\n- Translation: 有几种方法可以快速提高你的英语水平：练习口语和听力，阅读英语书籍，参加英语课程或找家教。坚持练习是关键。\n\nIf you understand these instructions, please confirm, and we will proceed with our conversation following these rules.",
+    "remark_en": "Engage in English learning through three facets of commenting, correcting English, and translating, and rescue yourself from rudimentary English. Contributed by @wxhzhwxhzh.",
+    "preview": null,
+    "website": null,
+    "source": null,
+    "tags": [
+      "contribute",
+      "language"
+    ]
+  },
+  {
+    "title": "口播稿",
+    "description": "write an article about [主题] in a human-like style, simple Chinese, using contractions, idioms, transitional phrases, interjections, dangling modifiers, and colloquialisms and avoiding repetitive phrases and unnatural sentence structures.",
+    "desc_cn": "请以人的口吻，采用缩略语、成语、过渡短语、感叹词、悬垂修饰语和口语化语言，避免重复短语和不自然的句子结构，撰写一篇关于 [主题] 的文章。",
+    "remark": "撰写视频、直播、播客和其他口语内容的剧本。来自 @Bettycroco 的投稿。",
+    "title_en": "Spoken script",
+    "desc_en": "write an article about [TOPIC] in a human-like style, simple English, using contractions, idioms, transitional phrases, interjections, dangling modifiers, and colloquialisms and avoiding repetitive phrases and unnatural sentence structures.",
+    "remark_en": "write scripts for live broadcasts, videos, podcasts and other types of spoken content. Contributed by @Bettycroco.",
+    "preview": null,
+    "website": null,
+    "source": null,
+    "tags": [
+      "contribute",
+      "write"
+    ]
+  },
+  {
     "title": "阅读空气",
     "description": "在以下这个场景中，有人对我说了一句话，请帮我分析对方可能想表达什么意思，并提供一个合适的回应。场景：[描述一个具体的情境]。说话人说：[具体的话语]。对方的意图可能是什么？我应该如何回应？",
     "desc_cn": "发生 [某个具体的事情/背景]，有人对我说：[内容]。请问对方可能想表达什么意思？你会怎样回应？",
@@ -3240,6 +3272,22 @@ const Users: User[] = [
     "title_en": "Weekly Report Generator",
     "desc_en": "Using the provided text below as the basis for a weekly report, generate a concise summary that highlights the most important points. The report should be written in markdown format and should be easily readable and understandable for a general audience. In particular, focus on providing insights and analysis that would be useful to stakeholders and decision-makers. You may also use any additional information or sources as necessary. Please begin by editing the following text: ",
     "remark_en": "Extract key points from daily work tasks and expand them appropriately to generate a weekly report.",
+    "preview": null,
+    "website": null,
+    "source": null,
+    "tags": [
+      "personal",
+      "write"
+    ]
+  },
+  {
+    "title": "文章高亮",
+    "description": "Carefully read the following text and highlight the key points using double asterisks (**) around the words or phrases you want to emphasize. Do not alter the original text or summarize it. Here is the text: [文章]",
+    "desc_cn": "仔细阅读以下文本，并使用双星号（**）突出显示要强调的单词或短语。不要改变原始文本或进行摘要。",
+    "remark": "高亮会增加文章的可读性。不过，ChatGPT 默认显示 Markdown 语法。结果出来后，需要手动框选高亮部分。我也试过用其他符号替代高亮提示，但效果不太好。因此，暂时先使用这个版本。",
+    "title_en": "Highlight the article",
+    "desc_en": "Carefully read the following text and highlight the key points using double asterisks (**) around the words or phrases you want to emphasize. Do not alter the original text or summarize it. Here is the text: []",
+    "remark_en": "Highlight augments the legibility of a written composition. Nonetheless, ChatGPT defaults to exhibit Markdown syntax, obliging one to manually select the highlighted segment after the output has been generated.",
     "preview": null,
     "website": null,
     "source": null,
