@@ -13,7 +13,7 @@ const config = {
   favicon: "img/favicon.ico",
 
   // Set the production url of your site here
-  url: "https://ai.newzone.top",
+  url: "https://www.aishort.top",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: "/",
@@ -102,6 +102,13 @@ const config = {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
+      announcementBar: {
+        id: 'announcement_bar',
+        content: getAnnouncement(),
+        backgroundColor: '#fafbfc',
+        textColor: '#091E42',
+        isCloseable: false,
+      },
     }),
 };
 
@@ -112,5 +119,11 @@ function getNavbar() {
   switch(process.env.DOCUSAURUS_CURRENT_LOCALE) {
     case "en": return enNavbar;
     default: return zhNavbar;
+  }
+}
+function getAnnouncement() {
+  switch(process.env.DOCUSAURUS_CURRENT_LOCALE) {
+    case "en": return 'Old domain will expire soon. Please bookmark aishort.top';
+    default: return '旧域名即将失效，继续使用请收藏 aishort.top';
   }
 }
