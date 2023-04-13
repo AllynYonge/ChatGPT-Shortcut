@@ -75,6 +75,22 @@ export type TagType =
 // prettier-ignore
 const Users: User[] = [
   {
+    "title": "产品提示文案",
+    "description": "generate copy for [landing page cta] that shortly [encourage user to create account]",
+    "desc_cn": "Q：为登陆页面的CTA生成简短的文案，鼓励用户创建账户 \r A：「立即创建账户，释放我们平台的全部潜力。现在注册，开始享受独家功能和优势！」 \n Q：让它更短 \n A：「现在注册，释放我们平台的全部潜力！」 \n Q：更简洁 \n A：「现在注册，获得独家功能。」 \n Q：让它适应按钮 \n A：「创建账户」",
+    "remark": "给出友好简短的提示反馈文案",
+    "title_en": "Product Tips Copywriting",
+    "desc_en": "Q：generate copy for landing page cta that shortly encourage user to create account \n A：\"Unlock the full potential of our platform by creating an account today.Sign up now and start enjoying exclusive features and benefits!\" \n Q：make it shorter \n A：\"Sign up now and unlock the full potential of our platform!\" \n Q：more brief \n A：\"Sign up now and access exclusive features.\" \n Q：make it fit in a button \n A：\"Create Account\"",
+    "remark_en": "Give a friendly and brief prompt feedback copy",
+    "preview": null,
+    "website": null,
+    "source": null,
+    "tags": [
+      "favorite",
+      "pm"
+    ]
+  },
+  {
     "title": '微型文案',
     "description": 'Can you give 4 ideas for micro-copy for [ when a new user lands to our empty video editor ]',
     "descn": '你能提供4个针对[当新用户进入我们的空白视频编辑器时]的微型文案创意吗？',
