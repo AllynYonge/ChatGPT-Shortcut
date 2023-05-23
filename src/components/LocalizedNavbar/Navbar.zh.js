@@ -17,6 +17,10 @@ const zhNavbar = {
       position: 'left',
       items: [
         {
+          label: "Chrome 扩展版",
+          href: "https://chrome.google.com/webstore/detail/chatgpt-shortcut/blcgeoojgdpodnmnhfpohphdhfncblnj",
+        },
+        {
           label: 'IMGPrompt',
           href: 'https://prompt.newzone.top/',
         },
@@ -33,6 +37,11 @@ const zhNavbar = {
           href: 'https://www.producthunt.com/posts/chatgpt-shortcut?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-chatgpt&#0045;shortcut',
         },
       ],
+    },
+    {
+      to: "https://xq7pd3qu17.feishu.cn/share/base/form/shrcnK7oaSPaAcj1YAHfy4jo0Jh",
+      label: "反馈/添加提示词",
+      position: "left",
     },
     { type: "localeDropdown", position: "right" },
     {

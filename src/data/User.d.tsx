@@ -16,27 +16,27 @@ export type User = {
 export type TagType =
   // DO NOT USE THIS TAG: we choose sites to add to favorites
   | "favorite"
-  | "mind"
   | "write"
   | "article"
-  | "text"
-  | "seo"
-  | "comments"
   | "code"
   | "ai"
-  | "life"
   | "living"
   | "interesting"
-  | "speech"
+  | "life"
   | "social"
   | "philosophy"
+  | "mind"
   | "pedagogy"
   | "academic"
-  | "interpreter"
   | "games"
   | "tool"
+  | "interpreter"
   | "language"
+  | "speech"
+  | "comments"
+  | "text"
   | "company"
+  | "seo"
   | "doctor"
   | "finance"
   | "music"
@@ -44,7 +44,8 @@ export type TagType =
   | "contribute"
   | "pm"
   | "ui/ux"
-  | "personal";
+  | "personal"
+  | "latest";
 
 export type Tag = {
   label: string;
