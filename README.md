@@ -17,9 +17,11 @@
 - 🇨🇳 **中文优化**：虽然提示词仍然使用英文，但提供了中文翻译，支持默认中文回复，方便中文用户理解和使用。
 - 📦 **开箱即用**：<https://www.aishort.top/>
 
-查看[博客文章](https://newzone.top/posts/2023-02-27-chatgpt_shortcuts.html)了解 ChatGPT Shortcut 的开发思路与初衷。
+查看[博客文章](https://newzone.top/posts/2023-02-27-chatgpt_shortcuts.html)了解 ChatGPT Shortcut 的开发思路与初衷。Chrome 插件版已经提交，等待审核。
 
-Chrome 插件版已经提交，等待审核。
+<a href="https://discord.gg/PZTQfJ4GjX">
+   <img src="https://img.shields.io/discord/1048780149899939881?color=%2385c8c8&label=Discord&logo=discord&style=for-the-badge" alt="chat on Discord">
+</a>
 
 ## 使用说明
 
@@ -52,6 +54,10 @@ ChatGPT Shortcut 页面默认显示全部的提示词，页面分为标签区、
 ![中英文切换](http://img.newzone.top/chatgptshortcut_encn.gif)
 
 如果想让提示词默认显示为中文，你可以点击标签区右上方的 `CN` 按钮。需要注意的是，即使切换到中文翻译，复制按钮也仅针对英文提示词复制。下方会有解释原因。
+
+### 🔥 热门排序
+
+现在页面会显示 Prompt 的使用次数，使用次数排名靠前的 Prompt 将会被标记为「favorite」。同时，Prompt 的标签排序也将以热力值为主。热力值将会定期更新。
 
 ## 🤔 常见问题
 
