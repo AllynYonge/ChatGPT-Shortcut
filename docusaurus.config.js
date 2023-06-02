@@ -8,7 +8,7 @@ const enNavbar = require('./src/components/LocalizedNavbar/Navbar.en');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "Tag filtering, keyword search, and one-click copy prompts",
+  title: "AiShort-Tag filtering, keyword search, and one-click copy prompts",
   // tagline: '方便中文使用 ChatGPT 快捷指令',
   favicon: "img/favicon.ico",
 
@@ -77,12 +77,12 @@ const config = {
       // Replace with your project's social card
       // image: 'img/docusaurus-social-card.jpg',
       metadata: [
-        { name: "keywords", content: "prompt,ChatGPT,AI prompts，提示词" },
+        { name: "keywords", content: "prompt,aishort,ChatGPT Shortcut,ChatGPT SC,ChatGPT,AI prompts，提示词" },
       ],
       navbar: getNavbar(),
       footer: {
         style: "dark",
-        copyright: `Copyright © ${new Date().getFullYear()} ChatGPT Shortcut`,
+        copyright: `Copyright © ${new Date().getFullYear()} AiShort (ChatGPT Shortcut)`,
       },
       prism: {
         theme: lightCodeTheme,
