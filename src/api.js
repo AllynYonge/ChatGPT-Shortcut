@@ -2,8 +2,9 @@ import axios from "axios";
 import Cookies from "js-cookie";
 
 // 登陆体系常量
-const API_URL = "https://api.newzone.top/api";
+const API_URL = "https://api.newzone.top/api"; // http://localhost:1337/api  https://api.newzone.top/api
 const authToken = Cookies.get("auth_token"); // Get the auth token from the cookie
+const username = Cookies.get("username");
 
 const config = {
   headers: {
@@ -13,6 +14,12 @@ const config = {
 
 // 登陆用户获取
 export async function getUserAllInfo() {
+  // 检查 authToken 是否存在
+  if (!authToken) {
+    // 如果 authToken 不存在，直接返回 null 或者抛出错误
+    // return null;
+    throw new Error("Auth token not provided");
+  }
   return axios.get(`${API_URL}/users/me?populate=*`, config);
 }
 
@@ -41,7 +48,6 @@ export async function updateFavorite(favoriteId, loves) {
 }
 
 export async function submitPrompt(values) {
-  const username = Cookies.get("username");
   const remark = values.remark ? `${values.remark} ` : '';
   return axios.post(
     `${API_URL}/userprompts`,
@@ -69,10 +75,8 @@ export async function register(values) {
     username: values.username,
     email: values.email,
     password: values.password,
-    loves: [],
   });
 }
-
 
 export async function changePassword(values) {
   try {
@@ -107,6 +111,9 @@ export async function forgotPassword(email) {
 // user
 export async function fetchUserData() {
   try {
+    if (!authToken) {
+      throw new Error("Auth token not provided");
+    }
     const response = await axios.get(`${API_URL}/users/me`, config);
     return response.data;
   } catch (error) {
